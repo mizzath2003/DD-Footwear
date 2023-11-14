@@ -24,6 +24,14 @@ DD-Footwear offers an engaging experience:
 2. **For Admins:**
    - Manage inventory efficiently with CRUD functionalities.
 
+## 🛠️ Running Locally
+
+To run DD-Footwear locally:
+1. Clone this repository.
+2. Set up the necessary environment for .Net, C#, and ASP.
+3. Open the project in your preferred development environment.
+4. Run the project and access the home page.
+
 ## 🚀 Development Details
 
 - **Dynamic & Responsive:** Built with a focus on dynamic content and responsive design.
