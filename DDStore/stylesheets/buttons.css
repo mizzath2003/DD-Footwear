@@ -1,0 +1,60 @@
+/******************************************************************************/
+/* STYLES RELATED TO EXPERIMENT BUTTONS                                       */
+/******************************************************************************/
+.btn {
+  --color: #000000;
+  --background-color: #d8d8d8;
+  --border-color: darken(#d8d8d8, 7.5%);
+  color: var(--color);
+  font-family: inherit;
+  font-weight: 600;
+  background-color: var(--background-color);
+  padding: 0.6rem 0.9rem;
+  border: solid 1px var(--border-color);
+  outline: none;
+  position: relative;
+  border-radius: 0.5rem;
+  user-select: none;
+  transition: box-shadow 64ms ease-out;
+  cursor: pointer;
+}
+.btn:active {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.4), 0 0.4rem 1rem rgba(0, 0, 0, 0.3) inset;
+}
+.btn:active:after {
+  opacity: 0;
+}
+
+/* btn Edit */
+.btn-info {
+  --color: #54beff;
+  --background-color: #042f49;
+  --border-color: #0079c4;
+}
+.btn-info:active {
+  --color: #90d4ff;
+}
+
+/* btn add menu */
+.btn-warning {
+  --color: #3e2723;
+  --background-color: hsl(38, 61%, 73%);
+  --border-color: #d9a700;
+}
+.btn-warning:active {
+  --color: #261815;
+}
+
+/* btn delete menu */
+.btn-error {
+  --color: #ff6060;
+  --background-color: #5c0000;
+  --border-color: #af0000;
+}
+.btn-error:active {
+  --color: #ff8383;
+}
+.btn a {
+  text-decoration: none;
+  color: inherit;
+}

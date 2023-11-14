@@ -1,0 +1,630 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8C49CBEC-83F3-4B7D-AFAB-E481C2C92D31}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DDStore</RootNamespace>
+    <AssemblyName>DDStore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44366</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="adminHome.aspx" />
+    <Content Include="adminInclude\adminFooter.ascx" />
+    <Content Include="adminInclude\adminHeader.ascx" />
+    <Content Include="adminInclude\adminSidebar.ascx" />
+    <Content Include="category.aspx" />
+    <Content Include="categoryAdd.aspx" />
+    <None Include="Connected Services\addCategoryServiceReference1\configuration91.svcinfo" />
+    <None Include="Connected Services\addCategoryServiceReference1\configuration.svcinfo" />
+    <Content Include="Confirmation.aspx" />
+    <Content Include="Connected Services\addCategoryServiceReference1\DDStore.addCategoryServiceReference1.insertCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\addCategoryServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\addProductServiceReference1\configuration91.svcinfo" />
+    <None Include="Connected Services\addProductServiceReference1\configuration.svcinfo" />
+    <Content Include="Connected Services\addProductServiceReference1\DDStore.addProductServiceReference1.InsertProductResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\addProductServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\loginServiceReference1\DDStore.loginServiceReference1.AttemptLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\addCategoryServiceReference1\addCategory.wsdl" />
+    <None Include="Connected Services\addProductServiceReference1\addProduct.wsdl" />
+    <None Include="Connected Services\loginServiceReference1\Login.wsdl" />
+    <None Include="Connected Services\registerServiceReference1\configuration91.svcinfo" />
+    <None Include="Connected Services\registerServiceReference1\configuration.svcinfo" />
+    <None Include="Connected Services\loginServiceReference1\configuration91.svcinfo" />
+    <None Include="Connected Services\loginServiceReference1\configuration.svcinfo" />
+    <None Include="Connected Services\loginServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\registerServiceReference1\DDStore.registerServiceReference1.addUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\registerServiceReference1\DDStore.registerServiceReference1.createUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\registerServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="ContactUs.aspx" />
+    <Content Include="css\availability-calendar.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\ion.rangeSlider.css" />
+    <Content Include="css\ion.rangeSlider.skinFlat.css" />
+    <Content Include="css\jquerysctipttop.css" />
+    <Content Include="css\linearicons.css" />
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\nice-select.css" />
+    <Content Include="css\nouislider.min.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\themify-icons.css" />
+    <Content Include="EditProduct.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\Linearicons-Free.svg" />
+    <Content Include="fonts\themify.svg" />
+    <Content Include="img\banner\loginbanner.jpg" />
+    <Content Include="img\banner\regbanner.jpg" />
+    <Content Include="img\ddlogo.png" />
+    <Content Include="Includes\footer.ascx" />
+    <Content Include="Includes\header.ascx" />
+    <Content Include="img\banner\banner-bg.jpg" />
+    <Content Include="img\banner\banner-img.png" />
+    <Content Include="img\banner\common-banner.jpg" />
+    <Content Include="img\banner\next.png" />
+    <Content Include="img\banner\prev.png" />
+    <Content Include="img\blog\add.jpg" />
+    <Content Include="img\blog\author.png" />
+    <Content Include="img\blog\c1.jpg" />
+    <Content Include="img\blog\c2.jpg" />
+    <Content Include="img\blog\c3.jpg" />
+    <Content Include="img\blog\c4.jpg" />
+    <Content Include="img\blog\c5.jpg" />
+    <Content Include="img\blog\c6.jpg" />
+    <Content Include="img\blog\cat-post\cat-post-1.jpg" />
+    <Content Include="img\blog\cat-post\cat-post-2.jpg" />
+    <Content Include="img\blog\cat-post\cat-post-3.jpg" />
+    <Content Include="img\blog\causes\causes-1.jpg" />
+    <Content Include="img\blog\causes\causes-2.jpg" />
+    <Content Include="img\blog\causes\causes-3.jpg" />
+    <Content Include="img\blog\feature-img1.jpg" />
+    <Content Include="img\blog\latest-post\l-post-1.jpg" />
+    <Content Include="img\blog\latest-post\l-post-2.jpg" />
+    <Content Include="img\blog\latest-post\l-post-3.jpg" />
+    <Content Include="img\blog\latest-post\l-post-4.jpg" />
+    <Content Include="img\blog\main-blog\m-blog-1.jpg" />
+    <Content Include="img\blog\main-blog\m-blog-2.jpg" />
+    <Content Include="img\blog\main-blog\m-blog-3.jpg" />
+    <Content Include="img\blog\main-blog\m-blog-4.jpg" />
+    <Content Include="img\blog\main-blog\m-blog-5.jpg" />
+    <Content Include="img\blog\next.jpg" />
+    <Content Include="img\blog\popular-post\post1.jpg" />
+    <Content Include="img\blog\popular-post\post2.jpg" />
+    <Content Include="img\blog\popular-post\post3.jpg" />
+    <Content Include="img\blog\popular-post\post4.jpg" />
+    <Content Include="img\blog\post-img1.jpg" />
+    <Content Include="img\blog\post-img2.jpg" />
+    <Content Include="img\blog\prev.jpg" />
+    <Content Include="img\brand\1.png" />
+    <Content Include="img\brand\2.png" />
+    <Content Include="img\brand\3.png" />
+    <Content Include="img\brand\4.png" />
+    <Content Include="img\brand\5.png" />
+    <Content Include="img\cart.jpg" />
+    <Content Include="img\category\c1.jpg" />
+    <Content Include="img\category\c2.jpg" />
+    <Content Include="img\category\c3.jpg" />
+    <Content Include="img\category\c4.jpg" />
+    <Content Include="img\category\c5.jpg" />
+    <Content Include="img\category\s-p1.jpg" />
+    <Content Include="img\elements\d.jpg" />
+    <Content Include="img\elements\disabled-check.png" />
+    <Content Include="img\elements\disabled-radio.png" />
+    <Content Include="img\elements\f1.jpg" />
+    <Content Include="img\elements\f2.jpg" />
+    <Content Include="img\elements\f3.jpg" />
+    <Content Include="img\elements\f4.jpg" />
+    <Content Include="img\elements\f5.jpg" />
+    <Content Include="img\elements\f6.jpg" />
+    <Content Include="img\elements\f7.jpg" />
+    <Content Include="img\elements\f8.jpg" />
+    <Content Include="img\elements\g1.jpg" />
+    <Content Include="img\elements\g2.jpg" />
+    <Content Include="img\elements\g3.jpg" />
+    <Content Include="img\elements\g4.jpg" />
+    <Content Include="img\elements\g5.jpg" />
+    <Content Include="img\elements\g6.jpg" />
+    <Content Include="img\elements\g7.jpg" />
+    <Content Include="img\elements\g8.jpg" />
+    <Content Include="img\elements\primary-check.png" />
+    <Content Include="img\elements\primary-radio.png" />
+    <Content Include="img\elements\success-check.png" />
+    <Content Include="img\elements\success-radio.png" />
+    <Content Include="img\exclusive.jpg" />
+    <Content Include="img\fav.png" />
+    <Content Include="img\features\f-icon1.png" />
+    <Content Include="img\features\f-icon2.png" />
+    <Content Include="img\features\f-icon3.png" />
+    <Content Include="img\features\f-icon4.png" />
+    <Content Include="img\i1.jpg" />
+    <Content Include="img\i2.jpg" />
+    <Content Include="img\i3.jpg" />
+    <Content Include="img\i4.jpg" />
+    <Content Include="img\i5.jpg" />
+    <Content Include="img\i6.jpg" />
+    <Content Include="img\i7.jpg" />
+    <Content Include="img\i8.jpg" />
+    <Content Include="img\l1.jpg" />
+    <Content Include="img\l2.jpg" />
+    <Content Include="img\l3.jpg" />
+    <Content Include="img\l4.jpg" />
+    <Content Include="img\l5.jpg" />
+    <Content Include="img\l6.jpg" />
+    <Content Include="img\l7.jpg" />
+    <Content Include="img\l8.jpg" />
+    <Content Include="img\login.jpg" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\men-bg.jpg" />
+    <Content Include="img\ob1.jpg" />
+    <Content Include="img\ob2.jpg" />
+    <Content Include="img\ob3.jpg" />
+    <Content Include="img\organic-food\b1.png" />
+    <Content Include="img\organic-food\b2.png" />
+    <Content Include="img\organic-food\b3.png" />
+    <Content Include="img\organic-food\b4.png" />
+    <Content Include="img\organic-food\c1.jpg" />
+    <Content Include="img\organic-food\c2.jpg" />
+    <Content Include="img\organic-food\c3.jpg" />
+    <Content Include="img\organic-food\c4.jpg" />
+    <Content Include="img\organic-food\cd-bg.jpg" />
+    <Content Include="img\organic-food\cd.png" />
+    <Content Include="img\organic-food\ci1.jpg" />
+    <Content Include="img\organic-food\ci2.jpg" />
+    <Content Include="img\organic-food\ci3.jpg" />
+    <Content Include="img\organic-food\f1.jpg" />
+    <Content Include="img\organic-food\f2.jpg" />
+    <Content Include="img\organic-food\f3.jpg" />
+    <Content Include="img\organic-food\f4.jpg" />
+    <Content Include="img\organic-food\m1.png" />
+    <Content Include="img\organic-food\mp1.jpg" />
+    <Content Include="img\organic-food\mp10.jpg" />
+    <Content Include="img\organic-food\mp11.jpg" />
+    <Content Include="img\organic-food\mp12.jpg" />
+    <Content Include="img\organic-food\mp2.jpg" />
+    <Content Include="img\organic-food\mp3.jpg" />
+    <Content Include="img\organic-food\mp4.jpg" />
+    <Content Include="img\organic-food\mp5.jpg" />
+    <Content Include="img\organic-food\mp6.jpg" />
+    <Content Include="img\organic-food\mp7.jpg" />
+    <Content Include="img\organic-food\mp8.jpg" />
+    <Content Include="img\organic-food\mp9.jpg" />
+    <Content Include="img\organic-food\ob1.jpg" />
+    <Content Include="img\organic-food\ob2.jpg" />
+    <Content Include="img\organic-food\ob3.jpg" />
+    <Content Include="img\organic-food\p1.jpg" />
+    <Content Include="img\organic-food\p2.jpg" />
+    <Content Include="img\organic-food\p3.jpg" />
+    <Content Include="img\organic-food\p4.jpg" />
+    <Content Include="img\organic-food\p5.jpg" />
+    <Content Include="img\organic-food\p6.jpg" />
+    <Content Include="img\organic-food\p7.jpg" />
+    <Content Include="img\organic-food\p8.jpg" />
+    <Content Include="img\organic-food\pl1.jpg" />
+    <Content Include="img\organic-food\pl2.jpg" />
+    <Content Include="img\organic-food\pl3.jpg" />
+    <Content Include="img\organic-food\pl4.jpg" />
+    <Content Include="img\organic-food\pl5.jpg" />
+    <Content Include="img\organic-food\pl6.jpg" />
+    <Content Include="img\organic-food\pl7.jpg" />
+    <Content Include="img\organic-food\pl8.jpg" />
+    <Content Include="img\organic-food\pm.jpg" />
+    <Content Include="img\organic-food\q1.jpg" />
+    <Content Include="img\organic-food\u1.png" />
+    <Content Include="img\organic-food\u2.png" />
+    <Content Include="img\organic-food\u3.png" />
+    <Content Include="img\product\card.jpg" />
+    <Content Include="img\product\e-p1.png" />
+    <Content Include="img\product\next.png" />
+    <Content Include="img\product\p1.jpg" />
+    <Content Include="img\product\p2.jpg" />
+    <Content Include="img\product\p3.jpg" />
+    <Content Include="img\product\p4.jpg" />
+    <Content Include="img\product\p5.jpg" />
+    <Content Include="img\product\p6.jpg" />
+    <Content Include="img\product\p7.jpg" />
+    <Content Include="img\product\p8.jpg" />
+    <Content Include="img\product\prev.png" />
+    <Content Include="img\product\review-1.png" />
+    <Content Include="img\product\review-2.png" />
+    <Content Include="img\product\review-3.png" />
+    <Content Include="img\q1.jpg" />
+    <Content Include="img\r1.jpg" />
+    <Content Include="img\r10.jpg" />
+    <Content Include="img\r11.jpg" />
+    <Content Include="img\r12.jpg" />
+    <Content Include="img\r2.jpg" />
+    <Content Include="img\r3.jpg" />
+    <Content Include="img\r4.jpg" />
+    <Content Include="img\r5.jpg" />
+    <Content Include="img\r6.jpg" />
+    <Content Include="img\r7.jpg" />
+    <Content Include="img\r8.jpg" />
+    <Content Include="img\r9.jpg" />
+    <Content Include="img\sd\c1.jpg" />
+    <Content Include="img\sd\c2.jpg" />
+    <Content Include="img\sd\c3.jpg" />
+    <Content Include="img\sd\c4.jpg" />
+    <Content Include="img\sd\c5.jpg" />
+    <Content Include="js\countdown.js" />
+    <Content Include="js\gmaps.min.js" />
+    <Content Include="js\ion.rangeSlider.js" />
+    <Content Include="js\jquery.ajaxchimp.min.js" />
+    <Content Include="js\jquery.magnific-popup.min.js" />
+    <Content Include="js\jquery.nice-select.min.js" />
+    <Content Include="js\jquery.sticky.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\nouislider.min.js" />
+    <Content Include="js\owl.carousel.min.js" />
+    <Content Include="js\parallax.min.js" />
+    <Content Include="js\vendor\bootstrap.min.js" />
+    <Content Include="js\vendor\jquery-2.2.4.min.js" />
+    <Content Include="js\vendor\popper.js" />
+    <Content Include="loginForm.aspx" />
+    <Content Include="Orders.aspx" />
+    <Content Include="products.aspx" />
+    <Content Include="productsAdd.aspx" />
+    <Content Include="registerUser.aspx" />
+    <Content Include="scripts\script.js" />
+    <Content Include="scripts\searchbar.js" />
+    <Content Include="scripts\sidebar.js" />
+    <Content Include="Shop.aspx" />
+    <Content Include="stylesheets\buttons.css" />
+    <Content Include="stylesheets\sidebar.css" />
+    <Content Include="stylesheets\style.css" />
+    <Content Include="stylesheets\style2.css" />
+    <Content Include="stylesheets\table.css" />
+    <Content Include="userAdd.aspx" />
+    <Content Include="users.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="home.aspx" />
+    <Content Include="Includes\Navbar.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adminHome.aspx.cs">
+      <DependentUpon>adminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminHome.aspx.designer.cs">
+      <DependentUpon>adminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminInclude\adminFooter.ascx.cs">
+      <DependentUpon>adminFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminInclude\adminFooter.ascx.designer.cs">
+      <DependentUpon>adminFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="adminInclude\adminHeader.ascx.cs">
+      <DependentUpon>adminHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminInclude\adminHeader.ascx.designer.cs">
+      <DependentUpon>adminHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="adminInclude\adminSidebar.ascx.cs">
+      <DependentUpon>adminSidebar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminInclude\adminSidebar.ascx.designer.cs">
+      <DependentUpon>adminSidebar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="category.aspx.cs">
+      <DependentUpon>category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="category.aspx.designer.cs">
+      <DependentUpon>category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="categoryAdd.aspx.cs">
+      <DependentUpon>categoryAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="categoryAdd.aspx.designer.cs">
+      <DependentUpon>categoryAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Confirmation.aspx.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Confirmation.aspx.designer.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\addCategoryServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\addProductServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\loginServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\registerServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditProduct.aspx.cs">
+      <DependentUpon>EditProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditProduct.aspx.designer.cs">
+      <DependentUpon>EditProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Includes\footer.ascx.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Includes\footer.ascx.designer.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Includes\header.ascx.cs">
+      <DependentUpon>header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Includes\header.ascx.designer.cs">
+      <DependentUpon>header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="loginForm.aspx.cs">
+      <DependentUpon>loginForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loginForm.aspx.designer.cs">
+      <DependentUpon>loginForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="products.aspx.cs">
+      <DependentUpon>products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="products.aspx.designer.cs">
+      <DependentUpon>products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="productsAdd.aspx.cs">
+      <DependentUpon>productsAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="productsAdd.aspx.designer.cs">
+      <DependentUpon>productsAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Includes\Navbar.ascx.cs">
+      <DependentUpon>Navbar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Includes\Navbar.ascx.designer.cs">
+      <DependentUpon>Navbar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="registerUser.aspx.cs">
+      <DependentUpon>registerUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registerUser.aspx.designer.cs">
+      <DependentUpon>registerUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop.aspx.cs">
+      <DependentUpon>Shop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop.aspx.designer.cs">
+      <DependentUpon>Shop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userAdd.aspx.cs">
+      <DependentUpon>userAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userAdd.aspx.designer.cs">
+      <DependentUpon>userAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users.aspx.cs">
+      <DependentUpon>users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users.aspx.designer.cs">
+      <DependentUpon>users.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\.DS_Store" />
+    <Content Include="css\bootstrap.map" />
+    <Content Include="css\main.css.map" />
+    <Content Include="css\main.map" />
+    <Content Include="js\.DS_Store" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\Linearicons-Free.eot" />
+    <Content Include="fonts\Linearicons-Free.ttf" />
+    <Content Include="fonts\Linearicons-Free.woff" />
+    <Content Include="fonts\Linearicons-Free.woff2" />
+    <Content Include="fonts\themify.eot" />
+    <Content Include="fonts\themify.ttf" />
+    <Content Include="fonts\themify.woff" />
+    <Content Include="img\.DS_Store" />
+    <Content Include="img\organic-food\.DS_Store" />
+    <None Include="Connected Services\registerServiceReference1\registerUser.wsdl" />
+    <None Include="packages.config" />
+    <Content Include="scss\.DS_Store" />
+    <Content Include="scss\main.scss" />
+    <Content Include="scss\theme\_banner.scss" />
+    <Content Include="scss\theme\_blog.scss" />
+    <Content Include="scss\theme\_common.scss" />
+    <Content Include="scss\theme\_contact.scss" />
+    <Content Include="scss\theme\_elements.scss" />
+    <Content Include="scss\theme\_footer.scss" />
+    <Content Include="scss\theme\_header.scss" />
+    <Content Include="scss\theme\_home.scss" />
+    <Content Include="scss\theme\_mixins.scss" />
+    <Content Include="scss\theme\_predefine.scss" />
+    <Content Include="scss\theme\_product.scss" />
+    <Content Include="scss\theme\_reset.scss" />
+    <Content Include="scss\theme\_variables.scss" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\addCategoryServiceReference1\" />
+    <WCFMetadataStorage Include="Connected Services\addProductServiceReference1\" />
+    <WCFMetadataStorage Include="Connected Services\loginServiceReference1\" />
+    <WCFMetadataStorage Include="Connected Services\registerServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57593</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44366/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

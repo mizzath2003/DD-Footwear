@@ -1,0 +1,251 @@
+/* Create four equal columns that sits next to each other */
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col {
+  flex: 0 0 100%;
+}
+.col-3 {
+  flex: 0 0 16%;
+}
+.col-3 {
+  flex: 0 0 25%;
+}
+.col-4 {
+  flex: 0 0 33%;
+}
+.col-5 {
+  flex: 0 0 41%;
+}
+.col-6 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.col-7 {
+  flex: 0 0 58%;
+}
+.col-8 {
+  flex: 0 0 66%;
+}
+.col-9 {
+  flex: 0 0 75%;
+}
+.col-10 {
+  flex: 0 0 83%;
+}
+.col-11 {
+  flex: 0 0 91%;
+}
+.col-12 {
+  flex: 0 0 100%;
+}
+body {
+  background-image: url(../images/form-pattern.png);
+  background-color: hsl(210deg 3.33% 11.76%);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* menu */
+
+.menu {
+  color: white;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  align-items: center;
+  border: solid 1px hsl(38deg 1.31% 33.89%);
+  max-width: 700px;
+  border-radius: 20px;
+  margin: auto;
+  background: var(--white-alpha-10);
+  margin-bottom: 30px;
+}
+
+.menu-img img {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.menu-context {
+  max-width: 500px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.menu-title {
+  text-align: left;
+  font-family: var(--fontFamily-forum);
+  font-weight: var(--weight-regular);
+  font-size: 3rem;
+  padding-left: 0;
+}
+
+.menu-price {
+  text-align: right;
+  color: hsl(38, 61%, 73%);
+  justify-content: end;
+  align-items: center;
+  display: flex;
+  font-family: "Forum", cursive;
+  font-size: 22px;
+  letter-spacing: 1.5px;
+}
+
+.menu-description {
+  padding-left: 4px;
+  color: hsla(0, 0%, 65%, 1);
+  font-size: 15px;
+}
+
+/* Menu Form  */
+
+.toCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 85px;
+}
+
+.menuBox {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  /* margin-top: 70px; */
+  border-radius: 10px;
+  padding-top: 50px;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.menuTital {
+  font-family: "Poppins", sans-serif;
+  font-weight: 450;
+  font-size: 3rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+}
+
+.form-content {
+  position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.form-content select option {
+  background: hsl(0deg 0.18% 27.66%);
+}
+
+.form-content label {
+  display: inline-block;
+  font-size: 1rem;
+  margin-left: 8px;
+}
+
+.btnSubmitMenu {
+  background-color: hsl(38, 61%, 73%);
+  border: 2px solid hsl(38, 61%, 73%);
+  color: hsla(40, 12%, 5%, 1);
+  text-transform: uppercase;
+  font-weight: 50px;
+  font-size: 1rem;
+  display: block;
+  padding: 10px 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  margin-bottom: 50px;
+}
+
+.btnSubmitMenu:hover {
+  opacity: 85%;
+}
+
+.form-content input,
+.form-content select {
+  background-color: hsla(0, 0%, 100%, 0.1);
+  border: 2px solid hsla(0, 0%, 100%, 0.2);
+  color: #f0f0f0;
+  display: block;
+  font-family: inherit;
+  font-size: 15px;
+  padding: 10px;
+  width: -webkit-fill-available;
+  margin: 8px;
+  border-radius: 8px;
+}
+.form-content textarea {
+  background-color: hsla(0, 0%, 100%, 0.1);
+  border: 2px solid hsla(0, 0%, 100%, 0.2);
+  color: #f0f0f0;
+  padding: 10px;
+  margin: 8px;
+  display: block;
+  width: -webkit-fill-available;
+  border-radius: 8px;
+}
+.btnSubmitUser {
+  background-color: hsl(38, 61%, 73%);
+  border: 2px solid hsl(38, 61%, 73%);
+  color: hsla(40, 12%, 5%, 1);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1rem;
+  display: block;
+  padding: 10px 50px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.btnSubmitUser:hover {
+  opacity: 0.85;
+}
+
+/* Search */
+.searchAlign {
+  display: flex;
+}
+
+.searchAlign input {
+  background-color: hsl(210deg 1.89% 20.78%);
+  color: #f0f0f0;
+  margin-top: 50px;
+  height: 40px;
+  width: 230px;
+  margin-left: auto;
+  border-radius: 5px;
+  border: 1px solid#b5ab9a69;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.searchAlign input:hover {
+  background-color: #b5ab9a69;
+}
+
+.searchAlign ::placeholder {
+  /* padding-left: 20px; */
+  color: #918875;
+}
